@@ -18,6 +18,5 @@
     "pdfjs-dist": "^3.11.174",
     "tesseract.js": "^5.0.0"
   },
-  "devDependencies": {},
   "description": ""
 }

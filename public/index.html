@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Upload de PDF</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Upload de PDF</h1>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="pdfFile">
+  <div id="mensagemSucesso" style="color: rgb(255, 255, 255);  background-color: #2afd00bd;"></div>
+  <div id="mensagemErro" style="color: rgb(255, 255, 255); background-color: #f70000bd;"></div>
+  <header>
+    <img src="https://lirp.cdn-website.com/d8dad59b/dms3rep/multi/opt/logo-mabu-dfd0999c-640w.png">
+    <h1>Upload de PDF</h1>
+  </header>
+  <form action="/upload" method="post" enctype="multipart/form-data" id="pdfForm">
+    <div>
+      <aside>
+        <label for="pdfFile1">NFS</label>
+        <input type="file" name="pdfFile" id="pdfFile1">
+      </aside>
+
+      <aside id="totvsInputs" style="display: none;">
+        <label for="pdfFile3">Boleto</label>
+        <input type="file" name="pdfFile3" id="pdfFile3">
+      </aside>
+    </div>
     <input type="submit" value="Enviar PDF">
+    <select id="fornecedor" name="fornecedor">
+      <option value="vivo">VIVO</option>
+      <option value="TOTVS">TOTVS</option>
+    </select>
   </form>
+
 
   <div id="textoExtrato"></div>
 
   <script src="client.js"></script>
 </body>
+
 </html>
